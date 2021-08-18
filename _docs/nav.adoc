@@ -1,0 +1,111 @@
+Introduction
+
+*   Cellular Communication for IoT
+*   What is EMnify communication Platform?
+*   What is a super network
+*   Telecommunication Services
+**  Data
+**  SMS
+**  USSD
+**  Voice
+
+Quick Start
+
+*   Ordering a SIM
+*   Registering a SIM and associating a Device
+*   Configure Policy
+*   Setting the APN
+*   Code snippet for sending data (AT commands + MQTT ) for different devices
+** Device with cellular modules
+** GPS Tracker
+** Industrial Router/ Gateway
+** Android
+** iOS
+*   Check connectivity on terminal, Portal/ API( PDP context created)
+*   Troubleshooting
+
+EMnify Architecture
+
+*   Cloud-Native Core Network       
+** Deployment on AWS
+*   Signaling Plane
+*   Data Plane
+*   IoT SIM
+*   IoT Roaming
+
+EMnify SIM
+
+* Form factors
+* Developer eSIM
+* multi IMSI
+** Network Selection
+** Network Blocking
+* SIM Applet
+* APN
+
+Supported Radio Access Types (RAT)
+
+*   2G, 3G, 4G
+** Location
+*  LTE-M, NB-IoT
+** PSM
+** eDRX
+*   5G NSA
+
+Product Features
+
+*   Security
+** OpenVPN
+** Cloud Connect
+*** Transit Gateway
+*** IPSec
+** DNS
+** IMEI Lock
+*   Multi Cloud Data Streamer
+** Events
+*** PDP context Created
+*** ...
+** Usage Records
+*** ...
+*** ...
+*   Regional Breakout
+*   EMnify API ( Just the description and then outlinked to reference)
+*   No-Code with EMnify
+
+Building with EMnify
+
+*   Authentication
+**  Using APP Token
+** Using Username and Password
+** Authentication Token / JWT
+** MFA
+** Best Practices
+*   Activating SIM- Deployment
+*   Device Config Via SMS API
+*   Building your prepaid Model
+** Quota Management
+** Tariff Plans
+*   Building Operational Dashboards
+** With EMnify API
+** with MCDS
+*** Using Portal
+*** using EMnify API
+*   Workflow Automation with NoCode
+** Zapier
+** Integromat
+*   Connectivity Satus
+** Which network am I connected to?
+** Blocking a Network
+** Confirm Connectivity
+** Location from network
+*   Invoicing
+** using MCDS
+** using API calls
+*   Examples
+**   Js examples
+**   Python examples
+**   Java SDK
+
+(API Reference)[https://cdn.emnify.net/api/doc/swagger.html]
+
+Change Logs
