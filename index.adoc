@@ -64,11 +64,11 @@
 
 === Code Samples
 
-===== Java SDK
+==== Java SDK
 
-===== Javascript
+==== Javascript
 
-===== Python
+==== Python
 
 == Integration Guides
 
