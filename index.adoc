@@ -4,13 +4,39 @@
 
 === Service Stack Overview
 
+==== Data
+
+==== SMS
+
+==== USSD
+
+==== Voice
+
 ==== IoT SIM
+
+==== Form factors
+
+==== Developer eSIM
+
+==== Multi IMSI
+
+==== SIM Applet
+
+==== APN
 
 ==== Global IoT Network Fabric
 
 ===== RAN Aggregation
 
 ===== Radio Access Types
+*   2G, 3G, 4G
+** Location
+*  LTE-M, NB-IoT
+** PSM
+** eDRX
+*   5G NSA
+
+==== Roaming
 
 ==== API & UI
 
@@ -23,6 +49,11 @@
 === Activating SIMs
 
 === Getting the first device online
+* Device with cellular modules
+* GPS Tracker
+* Industrial Router/ Gateway
+* Android
+* iOS
 
 === Trouble Shooting
 
@@ -30,15 +61,32 @@
 
 === SIM Life Cycle Management
 
-=== Endpoint Management & Policing
-
-=== Cloud Connect
+=== Endpoint Management & Policies
 
 === Regional Breakout
 
 === Multi Cloud Data Streamer
 
+==== Events
+* PDP Context Created
+
+==== Usage Records
+
+* ...
+
 === Security
+
+==== Cloud Connect
+
+* Transit Gateway
+
+* IPSec
+
+==== OpenVPN
+
+==== DNS
+
+==== IMEI Lock
 
 === Identity and Access Management
 
