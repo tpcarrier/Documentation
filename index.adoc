@@ -1,46 +1,4 @@
-== Introduction
-
-=== Cellular IoT
-
-=== Service Stack Overview
-
-==== Data
-
-==== SMS
-
-==== USSD
-
-==== Voice
-
-==== IoT SIM
-
-==== Form factors
-
-==== Developer eSIM
-
-==== Multi IMSI
-
-==== SIM Applet
-
-==== APN
-
-==== Global IoT Network Fabric
-
-===== RAN Aggregation
-
-===== Radio Access Types
-*   2G, 3G, 4G
-** Location
-*  LTE-M, NB-IoT
-** PSM
-** eDRX
-*   5G NSA
-
-==== Roaming
-
-==== API & UI
-
-==== Integrations
+== Cellular IoT
 
 == Quickstart
 
@@ -49,13 +7,60 @@
 === Activating SIMs
 
 === Getting the first device online
-* Device with cellular modules
-* GPS Tracker
-* Industrial Router/ Gateway
-* Android
-* iOS
+
+==== Generic device configuration
+
+==== GPS Trackers
+
+==== Industrial Routers/Gateways
+
+==== Android
+
+==== iOS
 
 === Trouble Shooting
+
+== Service Stack Overview
+
+=== IoT SIM
+
+==== Form factors
+
+==== Developer eSIM
+
+==== Multi IMSI
+
+=== Global IoT Network Fabric
+
+==== RAN Aggregation
+
+==== Distributed Data Transport
+
+===== Regional Breakout
+
+===== VPN Connectivity
+
+==== SMS
+
+// ==== USSD
+
+==== Voice
+
+==== RAN Aggregation
+
+==== Radio Access Types
+
+===== 2G, 3G, 4G
+
+===== LPWAN: LTE-M, NB-IoT
+
+// cover eDRX and PSM here
+
+====== 5G NSA
+
+==== API & UI
+
+==== Integrations
 
 == Services
 
@@ -65,24 +70,23 @@
 
 === Regional Breakout
 
+// Location based services
+
 === Multi Cloud Data Streamer
 
 ==== Events
-* PDP Context Created
 
-==== Usage Records
+==== Usage Data
 
-* ...
+=== Cloud Connect
 
-=== Security
+==== Transit Gateway
 
-==== Cloud Connect
-
-* Transit Gateway
-
-* IPSec
+==== IPSec
 
 ==== OpenVPN
+
+=== Security
 
 ==== DNS
 
@@ -96,7 +100,7 @@
 
 == Connectivity as Code
 
-=== Authentication
+=== API Authentication
 
 === Working with SIMs and Endpoints
 
@@ -120,6 +124,8 @@
 
 == Integration Guides
 
+// link integrations on website
+
 == Blue Prints
 
 === Automating SIM Life Cycle Management
@@ -130,3 +136,4 @@
 
 === Integrating Connectivity Status in a Portal
 
+// add matching content from blog
