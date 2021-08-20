@@ -348,20 +348,20 @@ When setting up an Android device with an EMnify SIM you need to follow these 5 
 
 1. Go to Settings -> Mobile Network
 
-image::Android_01_Settings.jpg[]
+image::assets/Android_01_Settings.jpg[width=350]
 
 2. Go to Mobile data 
 
-image::Android_02_Mobile_Network.jpg[]
+image::assets/Android_02_Mobile_Network.jpg[width=350]
 
 3. Enable roaming and go to Access Point Names (APN)
 
-image::Android_03_Mobile_Data.jpg[]
+image::assets/Android_03_Mobile_Data.jpg[width=350]
 
 4. Create a new APN with any name and configure the APN with "em"
 
-image::assets/Android_04_Create_Access_Point_name.jpg[]
-image::Android_05_Configure_APN[]
+image::assets/Android_04_Create_Access_Point_name.jpg[width=350]
+image::assets/Android_05_Configure_APN[width=350]
 
 
 ==== iOS devices
@@ -370,19 +370,19 @@ When setting up an iOS device with an EMnify IoT SIM you need to follow 4 steps
 
 1. Go to Settings -> Mobile Data
 
-image::iOS_01_Settings.png[]
+image::assets/iOS_01_Settings.png[width=350]
 
 2. Click on the EMnify Data Plan (first one if regular SIM or secondary in case of eSIM) 
 
-image:iOS_02_Mobile_Data.png[]
+image:assets/iOS_02_Mobile_Data.png[width=350]
 
 3. Enable Roaming and Click on Mobile Data Network
 
-image:iOS_03_Mobile_Network[]
+image:assets/iOS_03_Mobile_Network.png[width=350]
 
 4. Set APN to em - leave anything else blank
 
-image:iOS_04_APN[]
+image:assets/iOS_04_APN.png[width=350]
 
 === Trouble Shooting
 
