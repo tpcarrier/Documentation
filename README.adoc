@@ -1,3 +1,5 @@
+:imagesdir: assets
+
 :toc: left
 
 == Cellular IoT
@@ -14,7 +16,7 @@ Any device equipped with a SIM card requires an APN (Access Point Name) configur
 
 APN: `em` (or alternatively use `emnify`)
 
-Further some Android / IoS based devices and cellular modules also need to be configured to allow for roaming. 
+Further some Android / iOS based devices and cellular modules also need to be configured to allow for roaming. 
 
 Select below your device type and model to see how to configure the APN.  
 
@@ -41,7 +43,7 @@ With Quectel modules the APN can be set with the 3GPP standard command AT+CGDCON
 
 `AT+CGDCONT=1,"IP","em",,`
  
-Quectel also utlizes a vendor specific Command AT+QICSGP 
+Quectel also utilizes a vendor specific Command AT+QICSGP 
 
 `AT+QICSGP=1,1,"em","","",1`
 
@@ -351,11 +353,12 @@ When setting up an Android device with an EMnify SIM you need to follow these 5 
 . Enable roaming and go to Access Point Names (APN)
 . Create a new APN with any name and configure the APN with "em"
 
-    image::assets/Android_01_Settings.jpg[width=250, float="left"]
-    image::assets/Android_02_Mobile_Network.jpg[width=250, float="left"]
-    image::assets/Android_03_Mobile_Data.jpg[width=250, float="left"]
-    image::assets/Android_04_Create_Access_Point_name.jpg[width=250, float="left"]
-    image::assets/Android_05_Configure_APN[width=250, float="left"]
+[.float-group]
+image::Android_01_Settings.jpg[width=250, float="left"]
+image::Android_02_Mobile_Network.jpg[width=250, float="left"]
+image::Android_03_Mobile_Data.jpg[width=250, float="left"]
+image::Android_04_Create_Access_Point_name.jpg[width=250, float="left"]
+image::Android_05_Configure_APN[width=250, float="left"]
 
 
 ==== iOS devices
@@ -366,11 +369,12 @@ When setting up an iOS device with an EMnify IoT SIM you need to follow 4 steps
 . Click on the EMnify Data Plan (first one if regular SIM or secondary in case of eSIM) 
 . Enable Roaming and Click on Mobile Data Network
 . Set APN to em - leave anything else blank
-    
-    image::assets/iOS_01_Settings.png[width=250, float="left"]
-    image:assets/iOS_02_Mobile_Data.png[width=250, float="left"]
-    image:assets/iOS_03_Mobile_Network.png[width=250, float="left]
-    image:assets/iOS_04_APN.png[width=250, float="left]
+
+[.float-group]    
+image::iOS_01_Settings.png[width=250, float="left"]
+image::iOS_02_Mobile_Data.png[width=250, float="left"]
+image::iOS_03_Mobile_Network.png[width=250, float="left]
+image::iOS_04_APN.png[width=250, float="left]
 
 === Trouble Shooting
 
@@ -404,13 +408,233 @@ When setting up an iOS device with an EMnify IoT SIM you need to follow 4 steps
 
 ==== Radio Access Types
 
-===== 2G, 3G, 4G
+The EMnify IoT SIM and platform supports all devices and modules using the following radio access technologies 
 
-===== LPWAN: LTE-M, NB-IoT
+* <<2G (GSM/GPRS/Edge)>> - in more than 370 networks
+* <<3G (UMTS/WCDMA/HPSA/HSDPA)>> - in more than 390 networks
+* <<4G (LTE/LTE-A/LTE-CATXX)>> - in more than 310 networks
+* <<5G (NR)>> - in 5+ networks
+* <<LPWAN: LTE-M/NB-IoT, LTE-M (CAT-M1)>> - in more than 60 networks
+* <<LPWAN: LTE-M/NB-IoT, NB-IoT (CAT-NB1, CAT-NB2)>> - in 12+ networks
 
-// cover eDRX and PSM here
+When a device wants to connect with any of these radio technologies than the network needs to suport this technology as well as the device needs to support the frequency band which this network utilizes for this technology.  
 
-====== 5G NSA
+
+====== 2G (GSM/GPRS/Edge)
+
+GSM/GPRS is still one of the most dominant IoT technologies. Although the throughput is limited (GPRS max. 120kbps, Edge max. 1Mbps) it is more than sufficient for many IoT use cases. The modules are cheap ( <10$ ) and the coverage is widely available throughout the world in more than 200 countries. EMnify provides GSM/GPRS coverage in more than 370 GSM networks.
+
+GSM/GPRS is easy to deploy for IoT use cases because there only 4 frequency bands utilized by operators for GSM/GPRS worldwide. 
+
+In Americas
+
+* B2 (1900MHz) 
+* B5 (850MHz) 
+
+In the rest of world 
+
+* B3 (1800MHz) 
+* B8 (900MHz)
+
+Therefore, module manufacturers offer dual-band modules that can be used either in Americas or Rest of World - or Quadband modules that can be deployed globally. 
+
+Nevertheless GSM/GPRS is being phased out in several countries to free up frequency band for newer technologies. link:https://www.emnify.com/en/resources/global-2g-phase-out[More than 60 networks have discontinued or announced to discontinue GSM technology]. 
+
+====== 3G (UMTS/WCDMA/HPSA/HSDPA)
+
+3G technologies like UMTS, WCDMA, HSDPA, HSUPA have been driven by the surge for more data speed. As an evolution of GSM, many parts of the GSM/GPRS core network and signaling are reused, where the most difference is in the radio part.
+
+With more than 170 countries worldwide 3G/UMTS is still widely available. EMnify provides 3G/UMTS coverage in more than 390 networks. 
+
+3G modules are easy to deploy - similar to 2G - as there are only 5 different frequency bands utilized by operators worlwide (with exception of Japan and China). Most UMTS modules therefore can be deployed worldwide.
+
+* B1 (2100Mhz) - main UMTS band in the world
+* B2 (1900Mhz) - used in Americas
+* B4 (1700Mhz) - used in Americas
+* B5 (850Mhz) - Australia / Americas
+* B8 (900Mhz) - Europe 
+
+For Europe a 900/2100 Mhz dual-band module is required.
+For Americas a 850/1900 Mhz dual-band module is required. 
+
+3G/UMTS is also being phased out by several network operators to make space for newer technologies - also check here the article on link:https://www.emnify.com/en/resources/global-2g-phase-out[GMS and UMTS networks that are being discontinued]
+
+
+====== 4G (LTE/LTE-A/LTE-CATXX)
+
+LTE is a 4G technology (another one would be Wimaxx - which never succeeded). With the evolution of LTE there have been different LTE categories established such as CAT-1, CAT-3, CAT-4, CAT-6, CAT-9, CAT-12 - mainly with increasing data throughput per category. 
+While for consumer phones and broadband use cases the increase of throughput is relevant - the increasing costs for the modules have demanded for a lightweight LTE module for IoT use cases - which first led to CAT-1. 
+
+LTE CAT-1 offers 10Mbps in downlink and 5Mbps in uplink - and is available with network operators wherever LTE is deployed. Because of its wide availability and the possibility to roam between operators without limitation LTE CAT-1 is widely used in IoT use cases.
+
+Currently EMnify offers connectivity over LTE in more than 310 networks worldwide. 
+
+The deployment of LTE devices in a global scale is more challenging than with GSM and UMTS because network operators worldwide have been using more than 27 different frequency bands. Most modules therefore only support specific regions where the device can be deployed.
+
+Some main LTE-bands are
+
+* B3 (1800 MHz) - Europe, Africa, APAC
+* B7 (2600 MHz) - used in Americas, Europe, APAC
+* B20 (800 MHz) - used in Europe, Asia
+* B1 (2100 MHz) - Europe, Asia 
+* B2 (1900 NHz) - Americas
+* B4 (1700 Mhz) - Americas
+* B5 (850 Mhz) - North America, APAC
+
+TIP: Validate the frequency bands utilized by the operators in your deployment countries before deciding for a module. You can look up the utilized frequency bands link:https://www.frequencycheck.com/interfaces/lte[here] 
+
+
+====== LPWAN: LTE-M/NB-IoT
+
+While utilizing LTE infrastructure both NB-IoT and LTE-M are also part of the 5G standardization. Both technologies have been specified to meet the demand for IoT use cases in terms of: 
+
+* Reduced cost - to enable mass production of cellular IoT devices
+** removing unnecessary LTE features for IoT such as dual carrier, high modulations  
+* Low power utilization - for battery powered use cases that require years of operation 
+** introducing power saving features such as <<PSM>> and <<eDRX>>
+** reducing the max. transmission power to less than 200mA to cater for battery max. current (GSM for example has 2A max power)
+* Wider coverage - (+14dB for LTE-M and +20 for Nb-IoT sensitivity) for rural/indoor/underground use cases
+** utilizing extended coverage feature with more retransmissions to ensure data gets delivered
+* Smaller module size - to enable smaller device use cases
+
+Because LTE-M and NB-IoT rely on LTE infrastructure they also utilize a multitude of different frequency bands - a total of 26 bands have been specified for their use. 
+To deploy NB-IoT and LTE-M in multiple countries and regions the modules need to support the operator frequency bands. 
+
+Cellular LPWAN modules come in different versions
+
+* NB-IoT only or LTE-M only
+* LTE-M/NB-IoT combined
+* LTE-M/NB-IoT with 2G fallback and optional additional technologies (3G,4G)
+
+As of today, roaming for NB-IoT is very limited between operators because of new charging models being implemented for NB-IoT. For LTE-M roaming usually works over regular LTE roaming - nevertheless some operators have limited the access to their LTE-M networks and the available features (PSM, eDRX).  
+
+Check the EMnify LTE-M coverage, availability of PSM/eDRX and proposed frequency bands link:https://www.emnify.com/lte-m-coverage?hsLang=en[on our Website]. 
+
+
+[.lead]
+[#PSM]
+Power-Save-Mode (PSM)
+
+Jump to:
+
+* <<PSM_CELL,Why cellular communication is not ideal for IoT>>
+* <<PSM_WHAT,How does Power Save Mode work>>
+* <<PSM_ROAMING, Roaming for Power Save mode>>
+* <<PSM_AT_COMMANDS,AT Command calculation and examples for PSM settings>>
+* 
+
+[#PSM_CELL]
+Cellular communication for smartphones usually requires low latency on downlink - in case you are being called your phone should ring right away. Because of this there are two things the device does which require power:
+
+. continously listening to the radio if there is an incoming call
+. transmitting location information to the network where it should be called - whenever it moves out of a tracking area and periodicly every 54 minutes 
+
+[#PSM_WHAT]
+For most IoT use cases a downlink-initiated channel is not required - it is usually the device that intiates the communication to send e.g. sensor data. Therefore, a Power Save Mode is introduced that allows the device to go to sleep in case it has nothing to send.
+
+The Power Save mode has these characteristics
+
+* the Power Save Mode is similar to a power off period during which the module only consumes a couple of &#x03BC;A
+* the device tells the network for how long it is going periodically into PSM (timer T3412 extended)
+* the device/module will not be reachable during PSM from the outside in downlink
+* the device can wake up the module and send data (e.g. powerkey, interrupt or pin triggered)
+* when the device wakes up it does not need to reattach and reestablishing a PDN connection (unless it has moved to a different tracking area)
+* after the device wakes up it stays in idle mode for a configurable time (timer T3324) to listen for downlink messages (e.g. firmware updates)
+* the actual time the device is then in Power Save Mode is T3412 extended - T3324
+
+image:PSM.png[#PSM_Image].PSM and the 3412 and T3324 timers
+
+NOTE: some modules (e.g. u-blox SARA-R4/SARA-N4) do not go into sleep mode when having a SIM enabled PIN. On EMnify SIMs the PIN is disabled. 
+
+
+
+[#PSM_ROAMING]
+Be aware that not all Nb-IoT and LTE-M networks have implemented PSM - and even when PSM is available with the local operator this does not mean that a roaming SIM can use it. This makes it very difficult for devices that are moving - in case they use PSM, and the new network does not support PSM - or only other timer configurations. We therefore regularly test the link:https://www.emnify.com/lte-m-coverage?hsLang=en[availability of PSM in our EMnify LTE-M roaming footprint.]
+
+[#PSM_AT_COMMANDS]
+The 3GPP defined AT command to configure PSM is `AT+CPSMS`m which sets the T3412 extended and T3324 timers. 
+
+An example command is
+
+`AT+CPSMS=1,,,01001110,00000101`
+
+PSM will be enabled (`1`) and the desired value for T3412 extended is 140 hours (`01001110`) and the desired value for the T3324 timer is 10s (`01001110`). The network does not necessarily use the desired values but utilizes supported values that are close to the desired values. To read the effective PSM configuration use the command
+
+`AT+CPSMS?`
+
+There is a good calculator fon how to set the values for 3412 and T3324 available link:https://www.thalesgroup.com/en/markets/digital-identity-and-security/iot/resources/developers/psm-calculation-tool[from Thales, window=read-later]. 
+
+Module vendors have also implemented module specific commands, e.g. Quectel
+
+** `AT+QPSMS` extends PSM settings 
+** `AT+QCFG=”psm/enter”,1` used to put the module immediately into PSM when the RRC connection is released (not waiting for T3324 to expire)
+** `AT+QPSMEXTCFG` modem optimization command with different attributes such as making sure that PSM is randomized between different devices so they do not send data at the same time 
+
+[.lead]
+[#eDRX]
+extended Discontinuous Reception (eDRX)
+
+* <<eDRX_WHAT,How does eDRX work>>
+* <<eDRX_ROAMING, Roaming with eDRX>>
+* <<eDRX_AT_COMMANDS,AT Command examples for eDRX settings>>
+
+[#eDRX_WHAT]
+Whereas PSM is focused on uplink centric use cases, eDRX tries to reduce the power consumption for IoT Use cases that get downlink information. Regular smartphones are not continously listening on the radio for an incoming message but only every 1.28s or 2.56s which is called DRX (discontinous Reception). eDRX allows configuration of custom intervals of up to 40-175mins - depending on which configuration the visited network allows. 
+
+image:eDRX.png[id=PSM].PSM and the 3412 and T3324 timers
+
+[#eDRX_ROAMING]
+As with PSM - not all NB-IoT and LTE-M networks support eDRX or the same timer configuration - and even if they do this does not guarantee that a roaming SIM card can utilize eDRX. We therefore also test and link:https://www.emnify.com/lte-m-coverage?hsLang=en[publish the eDRX availability on our LTE-M roaming footprint, window=read-later].  
+
+[#eDRX_AT_COMMANDS]
+
+The standard 3GPP defined AT-command to configure eDRX is `AT+CEDRXS`.
+
+As an example the below command enables (`1`) eDRX for LTE-M (`4`) and an eDRX cycle of 143.36s (`1000`).
+
+`AT+CEDRXS=1,4,"1000"`
+
+The setting for NB-IoT would be `5` and the timer values are shown in below table
+
+|===
+| 0 0 0 0 | 5.12 seconds  
+| 0 0 1 0  | 10.24 seconds
+| 0 0 1 1  | 40.96 seconds
+| 0 1 0 0  | 5.12 seconds  
+| 0 0 1 0  | 61.44 seconds
+| 0 1 0 1  | 81.92 seconds
+| 0 1 1 0  | 102.4 seconds
+| 0 1 1 1  | 122.88 seconds
+| 1 0 0 0  | 143.36 seconds
+| 1 0 0 1  | 163.84 seconds
+| 1 0 1 0 | 327.68 seconds
+| 1 0 1 1 | 655,36 seconds
+| 1 1 0 0 | 1310.72 seconds
+| 1 1 0 1 | 2621.44 seconds
+| 1 1 1 0 | 5242.88 seconds
+| 1 1 1 1 | 10485.76 seconds
+|===
+
+The network will respond with the actual effective interval. 
+
+`+CEDRXS: [4,"1000","1000","0111"]` 
+
+====== 5G (NR)
+
+5G is the next major technology standard after LTE - which targets 3 different applications areas:
+
+. enhanced Mobile Broadband (eMBB)
+** with faster throughput upt 1Gps+ and more capacity in a local area
+** utilizing mmWave bands (5Ghz+) for increased throughput
+. Massive Machine Type communication (mMTC)
+** targeted at IoT application where a multitude of devices are in the same location and need to communicate with low power
+** LTE-M and NB-IoT often seen as decoupled from 5G to get earlier results will fusion with 5G mMTC
+. Ultra Reliable Low Latency Communications (URLLC)
+** for missing critical applications that require low latency and reliable data transmission 
+
+As of today 5G is mainly adopted for eMBB use cases - using a 5G non-standalone (NSA) deployment - meaning that the air interface uses 5G technology whereas the core network is still 4G. 
+
+EMnify has announced its first 5G roaming agreements in August 2020 and since then has reached agreements with more than a dozen network operators worldwide.
 
 ==== API & UI
 
