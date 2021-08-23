@@ -1,6 +1,5 @@
-:imagesdir: assets
-
 :toc: left
+:imagesdir: assets
 
 == Cellular IoT
 
@@ -354,12 +353,13 @@ When setting up an Android device with an EMnify SIM you need to follow these 5 
 . Create a new APN with any name and configure the APN with "em"
 
 [.float-group]
+--
 image::Android_01_Settings.jpg[width=250, float="left"]
 image::Android_02_Mobile_Network.jpg[width=250, float="left"]
 image::Android_03_Mobile_Data.jpg[width=250, float="left"]
 image::Android_04_Create_Access_Point_name.jpg[width=250, float="left"]
-image::Android_05_Configure_APN[width=250, float="left"]
-
+image::Android_05_Configure_APN.jpg[width=250, float="left"]
+--
 
 ==== iOS devices
 
@@ -370,11 +370,13 @@ When setting up an iOS device with an EMnify IoT SIM you need to follow 4 steps
 . Enable Roaming and Click on Mobile Data Network
 . Set APN to em - leave anything else blank
 
-[.float-group]    
+[.float-group]
+--
 image::iOS_01_Settings.png[width=250, float="left"]
 image::iOS_02_Mobile_Data.png[width=250, float="left"]
-image::iOS_03_Mobile_Network.png[width=250, float="left]
-image::iOS_04_APN.png[width=250, float="left]
+image::iOS_03_Mobile_Network.png[width=250, float="left"]
+image::iOS_04_APN.png[width=250, float="left"]
+--
 
 === Trouble Shooting
 
