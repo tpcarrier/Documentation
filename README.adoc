@@ -6,11 +6,11 @@ EMnify is a IoT communications platform that enables you to connect your IoT sol
 
 - IoT SIM
 
-Using a single SIM, you can have multiple IMSIs, switch between multiple carriers and ensure uninterrupted connectivity.
+Using a single SIM, you can have multiple IMSIs, switch between multiple carriers and ensure uninterrupted connectivity. You can learn more about IMSI in <<Service Stack Overview>> section
 
 - Network redundancy
 
-With our own *Home network* deployed to the cloud in multiple availability zones, device communication remain uninterrupted.
+With our own *Home network* deployed to the cloud in multiple availability zones, device communication remain uninterrupted. Learn more about our network architecture in the <<Service Stack Overview>> section.
 
 - Cloud Integration
 
