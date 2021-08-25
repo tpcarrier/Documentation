@@ -72,9 +72,10 @@ image::register_batch_sim.png[width=500, float="center"]
 
 NOTE: If you have a developer eSIM, the downloading process of an eSIM automatically registers it in our portal. 
 
-=== Assigning a Device
+// === Assigning a Device
 
-After you activate a SIM, it is also necessary to assign a device to it. This makes it easier to address the 
+// After you activate a SIM, it is also necessary to assign a device to it. This makes it easier to address the 
+
 === Getting the first device online
 
 Any device equipped with a SIM card requires an APN (Access Point Name) configuration to establish a data session. Some devices and networks auto-detect the APN but for most cases you need to configure it. 
