@@ -62,19 +62,32 @@ image::register_sims.png[width=500, float="center"]
 image::register_single_sim.png[width=500, float="center"]
 
 . Now enter the Batch Identification Code (*BIC* 1) in the prompt. You can find the BIC1 on the back of your SIM card. 
-// You can also get it by scanning the SIM.
 + 
-image::BIC.png[width=500, float="center"]
+image::BIC.png[width=250, float="center"]
++
+NOTE: You can directly register the Evaluation SIM cards by scanning the QR code on them. The scanner will copy the BIC and take you to the EMnify portal to register the SIM.
++
+image::QRScan.png[width=500, float="center"]
 
 . If you have ordered more than 5 SIM cards, you need to batch register them using the *BIC2*.
 +
 image::register_batch_sim.png[width=500, float="center"]
++
+image::register_sim_complete.png[width=500, float="center"]
+
 
 NOTE: If you have a developer eSIM, the downloading process of an eSIM automatically registers it in our portal. 
 
-// === Assigning a Device
+=== Assigning a Device
 
-// After you activate a SIM, it is also necessary to assign a device to it. This makes it easier to address the 
+After you activate a SIM, it is recommended to assign it to a device since it is a necessary step to get your devices online. 
+
+To create a device, give it a name and assign a service and coverage policy. 
+// Add link to service and coverage policy
+
+image::create_device.png[width=500, float="center"]
+
+If you plan on using your device right away, activate it. A monthly cost will be charged for each connected device. If you do not plan on using the device right away, select "leave disabled".
 
 === Getting the first device online
 
@@ -388,23 +401,23 @@ _Applies to RUT240, RUT950, RUT955, RUTX09, RUTX11, RUTX12, RUTX14, RUTXR1, RUT3
 
 Newer firmware version of the Teltonika Routers should automatically detect the EMnify APN. Nevertheless, in case the APN is not correctly detected it can be configured with 3 methods 
 
-. With the Teltonika WebUI over Wifi, Ethernet 
-. Via the SMS console through the EMnify Portal (most simple) 
-. via the EMnify SMS API or Zapier Integration (when automating the configuration)   
+1. With the Teltonika WebUI over Wifi, Ethernet 
+2. Via the SMS console through the EMnify Portal (most simple) 
+3. via the EMnify SMS API or Zapier Integration (when automating the configuration)   
  
-
+[start=1]
 1. APN configuration through the Teltonika Router WebUI 
- 
++
 Connect your PC through the routers Wi-Fi using the credentials provided on the device.  
 Open the Teltonika WebUI http://192.168.1.1 and go to the Mobile configuration. Type in “em” in APN – there is no PIN configured on the SIM and no APN username or password required.  
  
 
 2. Teltonika Networks Router APN configuration via SMS console / API or Zapier
- 
++ 
 link:https://wiki.teltonika-networks.com/view/SMS_Commands[Teltonika Documentation Source]
-
++
 Make sure that the Router is powered on and the SIM card is inserted and activated. In the EMnify portal the device should show as `Attached`. 
- 
++
 The following SMS command need to be send to the device
 ---- 
 cellular apn=em
@@ -489,7 +502,7 @@ The EMnify IoT SIM and platform supports all devices and modules using the follo
 When a device wants to connect with any of these radio technologies than the network needs to suport this technology as well as the device needs to support the frequency band which this network utilizes for this technology.  
 
 
-====== 2G (GSM/GPRS/Edge)
+===== 2G (GSM/GPRS/Edge)
 
 GSM/GPRS is still one of the most dominant IoT technologies. Although the throughput is limited (GPRS max. 120kbps, Edge max. 1Mbps) it is more than sufficient for many IoT use cases. The modules are cheap ( <10$ ) and the coverage is widely available throughout the world in more than 200 countries. EMnify provides GSM/GPRS coverage in more than 370 GSM networks.
 
@@ -509,7 +522,7 @@ Therefore, module manufacturers offer dual-band modules that can be used either 
 
 Nevertheless GSM/GPRS is being phased out in several countries to free up frequency band for newer technologies. link:https://www.emnify.com/en/resources/global-2g-phase-out[More than 60 networks have discontinued or announced to discontinue GSM technology]. 
 
-====== 3G (UMTS/WCDMA/HPSA/HSDPA)
+===== 3G (UMTS/WCDMA/HPSA/HSDPA)
 
 3G technologies like UMTS, WCDMA, HSDPA, HSUPA have been driven by the surge for more data speed. As an evolution of GSM, many parts of the GSM/GPRS core network and signaling are reused, where the most difference is in the radio part.
 
@@ -529,7 +542,7 @@ For Americas a 850/1900 Mhz dual-band module is required.
 3G/UMTS is also being phased out by several network operators to make space for newer technologies - also check here the article on link:https://www.emnify.com/en/resources/global-2g-phase-out[GMS and UMTS networks that are being discontinued]
 
 
-====== 4G (LTE/LTE-A/LTE-CATXX)
+===== 4G (LTE/LTE-A/LTE-CATXX)
 
 LTE is a 4G technology (another one would be Wimaxx - which never succeeded). With the evolution of LTE there have been different LTE categories established such as CAT-1, CAT-3, CAT-4, CAT-6, CAT-9, CAT-12 - mainly with increasing data throughput per category. 
 While for consumer phones and broadband use cases the increase of throughput is relevant - the increasing costs for the modules have demanded for a lightweight LTE module for IoT use cases - which first led to CAT-1. 
@@ -553,7 +566,7 @@ Some main LTE-bands are
 TIP: Validate the frequency bands utilized by the operators in your deployment countries before deciding for a module. You can look up the utilized frequency bands link:https://www.frequencycheck.com/interfaces/lte[here] 
 
 
-====== LPWAN: LTE-M/NB-IoT
+===== LPWAN: LTE-M/NB-IoT
 
 While utilizing LTE infrastructure both NB-IoT and LTE-M are also part of the 5G standardization. Both technologies have been specified to meet the demand for IoT use cases in terms of: 
 
