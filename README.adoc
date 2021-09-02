@@ -10,7 +10,7 @@ Using a single SIM, you can have multiple IMSIs, switch between multiple carrier
 
 - Highly available platform
 
-With our own *Home network* deployed to the cloud in multiple availability zones, device communication remain uninterrupted. Learn more about our network architecture in the <<Service Stack Overview>> section.
+Being able to connect to multiple operators over multiple partners increases connectivity availability. EMnify's platform (consisting of a mobile core network and a communication platform dedicated for IoT) has been built up cloud-natively, which means that it is deployed in 3 cloud regions within 2-3 availability zones per region / data centers. Even when one cloud data center becomes unavailable you can still transport your data over the EMnify network.
 
 - Cloud Integration
 
