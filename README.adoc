@@ -2,7 +2,7 @@
 :imagesdir: assets
 
 == Cellular IoT
-EMnify is a IoT communications platform that enables you to connect your IoT solutions anywhere with the EMnify Global IoT SIM. Not only do you get global cellular access but with our cloud-native platform, we provide you with network meta-data to manage, monitor, and secure device communication.
+EMnify is a IoT communications platform that enables you to connect your IoT solutions over the best networks in the country - anywhere with the EMnify Global IoT SIM. Not only do you get global cellular access but with our cloud-native platform, we provide you with control over your device connectivity and tools so that you can better operate and secure your solution.
 
 - IoT SIM
 
