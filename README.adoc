@@ -14,7 +14,7 @@ With our own *Home network* deployed to the cloud in multiple availability zones
 
 - Cloud Integration
 
-Given the cloud-native nature of our platform, you can easily integrate network meta-data to cloud-services of your choice and automate processes like activation, quota management, billing and many more.
+Given the cloud-native nature of our platform, you can easily integrate your cloud as well as on-premise IoT solutions. We allow you to connect through standard cloud services to establish a <<Cloud Connect, secure private network>> with your devices, get operational connectivity metadata delivered to your favorite << Multi Cloud Data Streamer, streaming analytics service>> or use your <<No-Code Workflow, low-code environment>>  to automate your device logistics and operation processes.
 
 - EMnify API
 
