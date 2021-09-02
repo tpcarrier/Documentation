@@ -23,7 +23,7 @@ With the EMnify API, you can integrate all our services and features into your o
 In the following sections of the guide, you will find more information about our technology stack, integrations to several cloud platforms, the EMmnify API as well as several examples to help you in your IoT solutions building journey.
 
 == Quickstart
-To begin your developing your IoT solutions with EMnify, you will need an EMnify account. link:https://portal.emnify.com/sign/up?utm_source=dev-hub[Sign up]  for free for your EMnify account.
+To begin developing your IoT solutions with EMnify, you will need an EMnify account. link:https://portal.emnify.com/sign/up?utm_source=dev-hub[Sign up] for free to a 60-day trial to use all functionalities.
 
 === Ordering SIMs
 Before you begin the production of your IoT solution  with your EMnify SIM cards, you may want to test the service. You can order an Evaluation Pack directly on the EMnify portal. 
