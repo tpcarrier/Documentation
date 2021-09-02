@@ -461,17 +461,120 @@ image::iOS_03_Mobile_Network.png[width=250, float="left"]
 image::iOS_04_APN.png[width=250, float="left"]
 --
 
-=== Trouble Shooting
+=== Troubleshooting
+
+When you experience issues while connecting your device for the first time there are several common patterns that can be identified by looking at the connected device section in the portal.
+If you do not have any entry in the connected devices - go back to <<Creating a Device>> and assign the SIM.  
+
+The device will show different icons that indicate the status (`Offline`, `Attached`, `Online`, `Blocked`). If no icon is shown than assign a SIM to the device. 
+
+For most troubleshooting a view on the Details->Events is necessary. 
+A usual event flow should look like this:
+
+. Update Location - the SIM card is (re)authenticating with a different network element. If successful the device will show as `Attached` and can already receive SMS. 
+. Update GPRS location - the SIM card has also succesfully registered for data sessions with a different network element. 
+. Create PDP context - the device has started a data transfer. The device will show `Online` as long is there is no delete PDP context event. 
+. Delete PDP context - the device has ended a data transfer. The event details will also show the data transmitted and the device status will be set to `Offline` 
+
+image:event_flow.png[align="center"]
+
+There can be many update locations before or in between the data session. 
+
+
+image:offline.png[width=20,float="left"] *The device is offline* 
+
+* click on Details -> ensure that device is enabled
+* click on Details -> events. Validate if there is any location update event created and rejected. The reasoning should indicate the resolution to fix the problem. If there is no location update event:
+* ensure the device is powered on and searches for a network
+* ensure that the device is in reception of any supported network
+
+image:attached.png[width=20,float="left"] *The device shows attached but does not transmit data* 
+
+* ensure that the APN is correctly set to 'em' or use alternatively 'emnify' as some devices do not support two digit APNs. Guides for different device can be found <<here, Getting the first device online>>
+* in case you changed policy settings make sure the radio types (2G,3G,4G)  and data access is activated
+* ensure mobile data is enabled, as well as international roaming is allowed 
+* click on Details -> Events. Validate if there is any PDP create event and rejected. The reason and resolution is given in the event description. 
+
+NOTE: The `Attached` status does not necessarily mean that the device is powered on. If the device first attaches to a network and then powers off - there is no information towards the EMnify network that would allow to detect this.
+
+image:online.png[width=20,float="left"] *The device shows online but does not transmit data**
+
+* ensure mobile data is enabled, as well as international roaming is allowed 
+* validate under Details->Events if any `Warn` or `Error` is detected
+* for NB-IoT and LTE-M this behaviour can happen when the device automatically connects to a network - rather specify the network that shall be used with using the `AT+COPS`. Also verify that the network is on EMnify's link:https://www.emnify.com/nb-iot-coverage[NB-IoT coverage] or 
+link:https://www.emnify.com/lte-m-coverage[LTE-M network coverage] list
+* ensure that your data destination and DNS server (default EMnify uses googles 8.8.8.8 DNS if your device does not specify a DNS) is not blocked for the device
+
+
+Other general troubleshooting tips:
+* after configuration changes make sure they are correctly applied on the device (e.g. with a reboot)
+* a reset connectivity image:reset_connectivity.png[width=20] on Connected Devices can also reset the network state and allow your device to freshly reattach 
+* the issue may only be present with one network or in the specific location (e.g. due to high interference for this network). You can use the Operator Blacklist to block the network and force the change to a different network.   
+
 
 == Service Stack Overview
 
 === IoT SIM
 
-==== Form factors
+IoT SIMs are more durable than regular SIM cards and come in different form factors and quality grades. EMnify has also a software application directly on the SIM so different operator profiles can be used based on the location of the device - so EMnify can provide more networks than traditional operators. 
 
-==== Developer eSIM
+==== Form factors 
+
+The traditional, plugable SIM card comes in 4 different form factors:
+* 1FF (approximaltely size of a creditcard - only used in first GSM phone) - 85 x 54 x 0,76mm 
+* 2FF (mini SIM) - 25 x 15 x 0,76mm
+* 3FF (Micro SIM) - 15 x 12 x 0,76 mm
+* 4FF (Nano SIM) - 12,3 x 8,8 x 0,67 mm
+
+EMnify offers pre-punched SIM cards in different combinations  2-in-1 (1FF and 2FF), 3-in-1 (1FF,2FF,3FF) and 4-in-1 (1FF,2FF,3FF,4FF). Especially in use cases where the devices are moving it is advisable to use a SIM which exactly fits the device and does not have another smaller form factor punched-out. The SIMs are then more durable and the contact to the device is more firmly.  
+
+Another form factor is MFF2 also called embedded SIM with the dimension 6 x 5 x 0.75-0.82mm. The embedded SIms are soldered onto a device and not removable. 
+
+Note: Often the term eSIM is used for the MFF2 factor. Nevertheless the eSIM term is also used for SIMs whose operator profiles can be updated over the air. These eUICC based eSIM can be in any of the described form factors - not only in MFF2. While eSIM/eUICC is widely adopted for consumer smartphone and watches - for IoT use cases (where the profile cannot be download via a screen or QR reader) the commercial and deployment model of the required infrastructure prohibits an easy change of operator profiles and is therefore not widely adopted.    
+
+==== Quality Grades
+
+The EMnify SIM cards come in two different quality grades Commercial and Industrial. In below table a comparison to a standard consumer SIM is made.  
+
+
+|===
+|Parameter | Consumer SIM | Commercial  | Industrial 
+
+|Available form factors | 2FF, 3FF, 4FF | 2FF, 3FF, 4FF | MFF2, 2FF, 3FF (2-in-1 or 3-in-1)   
+|Temperature Range  | - | 25° - 85°C |  -40° - 105°C 
+|Data Retention | 10 years | 10 years | 15 years at 85°C
+|Write Cycles | 100,000 | 500,000 | 1,000,000 
+|Memory | 64-128kB | 128kB | 128KB
+|Corrosion Resistance Jedec JSD22-A107 | - | CA | CC
+|Moisture Resistance Jedec JESD22-A102 | - | 110°C / 85% RH | 130°C / 85% RH
+|Humidity Resistance Jedec JESD22-A101 | - | - | HA
+|Vibration Jedec JESD22-B103 | - | - | VA 
+|Mechnical Shock Jedec JESD22-B104 | - | - | SA 
+|Low Power features | -  
+a|* Poll Interval negotiation
+  * UICC suspension and resume
+a|* Poll Interval negotiation
+  * UICC suspension and resume
+|===
+
+
+==== eSIM
+
+EMnify offers an easy entry to test the services and platform by downloading an EMnify eSIM profile to an eSIM capable phone or tablet. During the trial period every organisation has the option to download one profile which can be used instantly. 
+
+The eSIM does not use a multi-IMSI applet (as on the physical SIM cards) and therefore has some difference in the network coverage. For a list of supported devices and limitations please refer to the link:https://support.emnify.com/hc/en-us/articles/360021545600-Evaluation-eSIM-device-support-and-restrictions#h_01F7V2BVKT0RQRVXK3VNSPYQMW[knowledge base] 
+
+The eSIM can be used to test and verify all EMnify functionality including:
+
+* availability of networks
+* API functionality
+* Cloud Connect and Datastreamer integration
+* Zapier
 
 ==== Multi IMSI
+
+
+
 
 === Global IoT Network Fabric
 
