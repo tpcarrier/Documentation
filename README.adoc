@@ -18,7 +18,7 @@ Given the cloud-native nature of our platform, you can easily integrate your clo
 
 - EMnify API
 
-With the EMnify API, you can integrate all our services and features into your own applications using HTTP requests.  
+With the EMnify API, you can control your SIM cards from your own applications using HTTP requests - for example to align your SIM contract with your device lifecycle, build own prepaid models or to send or receive configuration SMS. The complete functionality available is documented in the <<API Reference, API Reference>> section. 
 
 In the following sections of the guide, you will find more information about our technology stack, integrations to several cloud platforms, the EMmnify API as well as several examples to help you in your IoT solutions building journey.
 
