@@ -25,9 +25,8 @@ In the following sections of the guide, you will find more information about our
 == Quickstart
 To begin developing your IoT solutions with EMnify, you will need an EMnify account. link:https://portal.emnify.com/sign/up?utm_source=dev-hub[Sign up] for free to a 60-day trial to use all functionalities.
 
-=== Order free evaluation SIM package
-Before you begin the production of your IoT solution  with your EMnify SIM cards, you may want to test the service. You can order your free Evaluation SIM package  on the EMnify portal with which you can test all EMnify services. Whereas you can download the  eSIM for your smartphone for free.
-NOTE: Shipping costs may apply for the 3 physical SIM cards, depending on your location.
+=== Order a free evaluation SIM package
+Before you begin the production of your IoT solution  with your EMnify SIM cards, you may want to test the service. You can order your free Evaluation SIM package  on the EMnify portal with which you can test all EMnify services. Whereas you can download the  eSIM for your smartphone for free - shipping costs may apply for the 3 physical SIM cards, depending on your location.
 
 Log into your link:https://portal.emnify.com[EMnify account] and follow these steps:
 
@@ -49,26 +48,29 @@ image::order-SIM_step3.png[width=500, float="center"]
 +
 image::order-SIM_step4.png[width=500, float="center"]
 
-=== Activating SIMs
+=== Registering SIMs
 
-Once you get your EMnify SIM, you need to activate it before you can start using it. You can activate your SIM using the EMnify Portal.
-
-. To activate your SIM using the EMnify portal, login to your link: https://portal.emnify.com?utm_source=dev-hub[EMnify account]
-On your dashboard, click *REGISTER* on the card Register your SIM cards.
-+
-image::register_sims.png[width=500, float="center"]
+Once you get your EMnify SIMs, you need to register them before you can start using them. 
 
 . If you have the evaluation SIM cards, you will have to register them one by one.
++
+Scan the QR code on the SIM card and click on register. The scanner will copy the BIC and take you to the EMnify portal to register the SIM.
++
+image::QRScan.png[width=500, float="center"]
+
+. If you do not have a QR reader or want to do this on a desktop without a camera, register using the BIC
++
+Login to your link: https://portal.emnify.com?utm_source=dev-hub[EMnify account]
+On your dashboard, click *REGISTER* on the card - Register your SIM cards.
++
+image::register_sims.png[width=500, float="center"]
 +
 image::register_single_sim.png[width=500, float="center"]
 
 . Now enter the Batch Identification Code (*BIC* 1) in the prompt. You can find the BIC1 on the back of your SIM card. 
 + 
 image::BIC.png[width=250, float="center"]
-+
-NOTE: You can directly register the Evaluation SIM cards by scanning the QR code on them. The scanner will copy the BIC and take you to the EMnify portal to register the SIM.
-+
-image::QRScan.png[width=500, float="center"]
+
 
 . If you have ordered more than 5 SIM cards, you need to batch register them using the *BIC2*.
 +
@@ -79,16 +81,16 @@ image::register_sim_complete.png[width=500, float="center"]
 
 NOTE: If you have a developer eSIM, the downloading process of an eSIM automatically registers it in our portal. 
 
-=== Assigning a Device
+=== Creating a Device
 
-After you activate a SIM, it is recommended to assign it to a device since it is a necessary step to get your devices online. 
+After you register a SIM, you need to create a virtual representation of the device associated with the SIM.
 
 To create a device, give it a name and assign a service and coverage policy. 
 // Add link to service and coverage policy
 
 image::create_device.png[width=500, float="center"]
 
-If you plan on using your device right away, activate it. A monthly cost will be charged for each connected device. If you do not plan on using the device right away, select "leave disabled".
+If you plan on using your device right away, activate it. If you do not plan on using the device right away, select "leave disabled".
 
 === Getting the first device online
 
