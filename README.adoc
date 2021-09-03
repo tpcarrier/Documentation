@@ -895,7 +895,7 @@ The DNS settings can be changed in the Portal -> Device Policies -> Service Poli
 image:dns_setting.png[].Custom DNS setting configuration
 
 
-To utilize a private DNS server which is not reachable via a public IP, requires to setup a private network with the machine or network where the private DNS is located. This can be done using Cloud Connect either with Amazon Transit Gateway or IPsec. A tutorial on how to setup a DNS firewall based on a private DNS using Amazon Route 53 is available link:https://www.emnify.com/en/developer-hub/dns-filtering[here]
+Utilizing a private DNS server which is not reachable via a public IP, requires to setup a private network with the machine or a network where the private DNS is located. This can be done using Cloud Connect either with Amazon Transit Gateway or IPsec. A tutorial on how to setup a DNS firewall based on a private DNS using Amazon Route 53 is available link:https://www.emnify.com/en/developer-hub/dns-filtering[here]
 
 ==== IMEI Lock
 
