@@ -489,7 +489,7 @@ There can be many update locations before or in between the data session.
 * ensure the device is powered on and searches for a network
 * ensure that the device is in reception of any supported network
 
-==== icon:attached[width="20"] The device shows attached but does not transmit data 
+==== icon:attached[] The device shows attached but does not transmit data 
 
 * ensure that the APN is correctly set to 'em' or use alternatively 'emnify' as some devices do not support two digit APNs. Guides for different device can be found <<here, Getting the first device online>>
 * in case you changed policy settings make sure the radio types (2G,3G,4G)  and data access is activated
