@@ -509,7 +509,7 @@ link:https://www.emnify.com/lte-m-coverage[LTE-M network coverage] list
 
 ==== Other general troubleshooting tips
 * after configuration changes make sure they are correctly applied on the device (e.g. with a reboot)
-* a reset connectivity icon:reset_connectivity[width="20"] on Connected Devices can also reset the network state and allow your device to freshly reattach 
+* a reset connectivity icon:online[width="20"] on Connected Devices can also reset the network state and allow your device to freshly reattach 
 * the issue may only be present with one network or in the specific location (e.g. due to high interference for this network). You can use the Operator Blacklist to block the network and force the change to a different network.   
 
 
