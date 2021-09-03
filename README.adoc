@@ -562,7 +562,7 @@ a|* Poll Interval negotiation
 
 EMnify offers an easy entry to test the services and platform by downloading an EMnify eSIM profile to an eSIM compatible phone or tablet. During the trial period every organization has the option to download one profile which can be used instantly. 
 
-The eSIM does not use a multi-IMSI applet (as on the physical SIM cards) and therefore has some difference in the network coverage. For a list of supported devices and limitations please refer to the link:https://support.emnify.com/hc/en-us/articles/360021545600-Evaluation-eSIM-device-support-and-restrictions#h_01F7V2BVKT0RQRVXK3VNSPYQMW[knowledge base] 
+The eSIM does not use a multi-IMSI applet (as on the physical SIM cards) and therefore has some differences in the network coverage. For a list of supported devices and limitations please refer to the link:https://support.emnify.com/hc/en-us/articles/360021545600-Evaluation-eSIM-device-support-and-restrictions#h_01F7V2BVKT0RQRVXK3VNSPYQMW[knowledge base] 
 
 The eSIM can be used to test and verify all EMnify functionality including:
 
