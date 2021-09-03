@@ -889,7 +889,7 @@ When a device establishes a connection it uses a Domain Name Service (DNS) to re
 
 The device itself can configure a DNS service that it uses to resolve domain names. If the device does not use a DNS then EMnify will provide a domain name service to the device. By default EMnify will route all DNS queries over Google's public DNS `8.8.8.8`. 
 
-Customers can also configure to use their own DNS - no matter if a public or private one.
+Customers can also configure to use their own DNS - no matter if it is a public or a private one.
 The DNS settings can be changed in the Portal -> Device Policies -> Service Policies -> More Options -> DNS
 
 image:dns_setting.png[].Custom DNS setting configuration
