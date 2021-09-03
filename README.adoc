@@ -466,7 +466,7 @@ image::iOS_04_APN.png[width=250, float="left"]
 When you experience issues while connecting your device for the first time there are several common patterns that can be identified by looking at the connected device section in the portal.
 If you do not have any entry in the connected devices - go back to <<Creating a Device>> and assign the SIM.  
 
-The device will show different icons that indicate the status (`Offline`, `Attached`, `Online`, `Blocked`). If no icon is shown than assign a SIM to the device. 
+The device will show different icons that indicate the status (`Offline`, `Attached`, `Online`, `Blocked`). If no icon is visible, assign a SIM to the device. 
 
 For most troubleshooting a view on the Details->Events is necessary. 
 A usual event flow should look like this:
