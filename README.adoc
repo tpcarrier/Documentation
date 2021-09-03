@@ -481,14 +481,14 @@ image:event_flow.png[align="center"]
 There can be many update locations before or in between the data session. 
 
 
-image:offline.png[width=20,float="left"] *The device is offline* 
+==== *The device is offline* 
 
 * click on Details -> ensure that the device is enabled
 * click on Details ->Events. Validate if there is any location update event created and rejected. The reasoning should indicate the resolution to the problem. If there is no location update event:
 * ensure the device is powered on and searches for a network
 * ensure that the device is in reception of any supported network
 
-image:attached.png[width=20,float="left"] *The device shows attached but does not transmit data* 
+==== *The device shows attached but does not transmit data* 
 
 * ensure that the APN is correctly set to 'em' or use alternatively 'emnify' as some devices do not support two digit APNs. Guides for different device can be found <<here, Getting the first device online>>
 * in case you changed policy settings make sure the radio types (2G,3G,4G)  and data access is activated
@@ -497,7 +497,7 @@ image:attached.png[width=20,float="left"] *The device shows attached but does no
 
 NOTE: The `Attached` status does not necessarily mean that the device is powered on. If the device first attaches to a network and then powers off - there is no information towards the EMnify network that would allow to detect this.
 
-image:online.png[width=20,float="left"] *The device shows online but does not transmit data**
+==== *The device shows online but does not transmit data*
 
 * ensure mobile data is enabled, as well as international roaming is allowed 
 * validate under Details->Events if any `Warn` or `Error` is detected
@@ -506,9 +506,9 @@ link:https://www.emnify.com/lte-m-coverage[LTE-M network coverage] list
 * ensure that your data destination and DNS server (default EMnify uses googles 8.8.8.8 DNS if your device does not specify a DNS) is not blocked for the device
 
 
-Other general troubleshooting tips:
+==== Other general troubleshooting tips
 * after configuration changes make sure they are correctly applied on the device (e.g. with a reboot)
-* a reset connectivity image:reset_connectivity.png[width=20] on Connected Devices can also reset the network state and allow your device to freshly reattach 
+* a reset connectivity on Connected Devices can also reset the network state and allow your device to freshly reattach 
 * the issue may only be present with one network or in the specific location (e.g. due to high interference for this network). You can use the Operator Blacklist to block the network and force the change to a different network.   
 
 
