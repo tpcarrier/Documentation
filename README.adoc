@@ -569,7 +569,7 @@ The eSIM can be used to test and verify all EMnify functionality including:
 * availability of networks
 * API functionality
 * Cloud Connect and Datastreamer integration
-* Zapier
+* Zapier- No-Code Integrations
 
 ==== Multi IMSI
 
