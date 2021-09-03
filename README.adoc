@@ -851,11 +851,51 @@ EMnify has announced its first 5G roaming agreements in August 2020 and since th
 
 ==== IPSec
 
-==== OpenVPN
+=== OpenVPN
+
+EMnify's communication platform hosts a OpenVPN service, that allows to establish a private network between the device and any remote client location. The remote client can either be on the application server itself - or also on any machine that wants to remotely access the device.
+
+==== OpenVPN Overview
+
+To use the OpenVPN service the IoT device does not need any OpenVPN software or dynamic DNS resolution. Through the EMnify SIM every device will get a private static IP address which can be used to identify and address the device.  
+
+You can connect from any machine using a OpenVPN client to the OpenVPN service on the EMnify communication platform. The machine can then use the private static IP address of the device to communicate with it remotely. 
+
+image:OpenVPN.png[].OpenVPN System Overview
+
+At the same time the IoT device can send data through the private tunnel to the IP address of the remote machine.  
+
+==== OpenVPN setup
+
+In order to setup OpenVPN on your machine the following high level steps are required. 
+
+1. In the EMnify Portal -> Device Policies: Set the service profile to a VPN breakout region, eu-west-1 (VPN)
+2. Portal -> Integrations -> OpenVPN: download the VPN configuration file for your region and operating system
+3. Create a credentials.txt with you username / password or organisation_id / application token.
+4. load the VPN configuration file and credentials.txt with your OpenVPN client 
+
+For detailed instructions please refer to our knowledge base articles
+
+. link:https://support.emnify.com/hc/en-us/articles/360019625379-OpenVPN-Integration-Guide-for-MacOS[OpenVPN Integration MacOS]
+. link:https://support.emnify.com/hc/en-us/articles/115001723273-OpenVPN-Integration-Guide-for-Windows[OpenVPN Integration Windows]
+. link:https://support.emnify.com/hc/en-us/articles/115001724434-OpenVPN-Integration-Guide-for-Linux[OpenVPN Integration Linux]
+
 
 === Security
 
 ==== DNS
+
+When a device establishes a connection it uses a Domain Name Service (DNS) to resolve a hostname to an IP address to which it can send data. For example a hostname such as *.iot.example.com will be mapped to the IP address e.g. 120.126.230.60. 
+
+The device itself can configure a DNS service that it uses to resolve domain names. If the device does not use a DNS than EMnify will provide a domain name service to the device. As a default EMnify will route all DNS queries over googles public DNS `8.8.8.8`. 
+
+Customers can also configure to use their own DNS - no matter if a public or private one.
+The DNS setting can be changed in the Portal -> Device Policies -> Service Policies -> More Options -> DNS
+
+image:dns_setting.png[].Custom DNS setting configuration
+
+
+To utilize a private DNS server which is not reachable via a public IP, requires to setup a private network with the machine or network where the private DNS is located. This can be done using Cloud Connect either with Amazon Transit Gateway or IPsec. A tutorial on how to setup a DNS firewall based on a private DNS using Amazon Route 53 is available link:https://www.emnify.com/en/developer-hub/dns-filtering[here]
 
 ==== IMEI Lock
 
