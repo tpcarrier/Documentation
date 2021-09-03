@@ -887,7 +887,7 @@ For detailed instructions please refer to our knowledge base articles
 
 When a device establishes a connection it uses a Domain Name Service (DNS) to resolve a hostname to an IP address to which it can send data. For example a hostname such as *.iot.example.com will be mapped to the IP address e.g. 120.126.230.60. 
 
-The device itself can configure a DNS service that it uses to resolve domain names. If the device does not use a DNS than EMnify will provide a domain name service to the device. As a default EMnify will route all DNS queries over googles public DNS `8.8.8.8`. 
+The device itself can configure a DNS service that it uses to resolve domain names. If the device does not use a DNS then EMnify will provide a domain name service to the device. By default EMnify will route all DNS queries over Google's public DNS `8.8.8.8`. 
 
 Customers can also configure to use their own DNS - no matter if a public or private one.
 The DNS setting can be changed in the Portal -> Device Policies -> Service Policies -> More Options -> DNS
