@@ -484,7 +484,7 @@ There can be many update locations before or in between the data session.
 image:offline.png[width=20,float="left"] *The device is offline* 
 
 * click on Details -> ensure that device is enabled
-* click on Details -> events. Validate if there is any location update event created and rejected. The reasoning should indicate the resolution to fix the problem. If there is no location update event:
+* click on Details ->Events. Validate if there is any location update event created and rejected. The reasoning should indicate the resolution to the problem. If there is no location update event:
 * ensure the device is powered on and searches for a network
 * ensure that the device is in reception of any supported network
 
