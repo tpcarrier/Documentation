@@ -468,7 +468,7 @@ If you do not have any entry in the connected devices - go back to <<Creating a 
 
 The device will show different icons that indicate the status (`Offline`, `Attached`, `Online`, `Blocked`). If no icon is visible, assign a SIM to the device. 
 
-For most troubleshooting a view on the Details->Events is necessary. 
+For most of the troubleshooting,  a look at Details->Events is necessary. 
 A usual event flow should look like this:
 
 . Update Location - the SIM card is (re)authenticating with a different network element. If successful the device will show as `Attached` and can already receive SMS. 
