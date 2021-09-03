@@ -472,7 +472,7 @@ For most troubleshooting a view on the Details->Events is necessary.
 A usual event flow should look like this:
 
 . Update Location - the SIM card is (re)authenticating with a different network element. If successful the device will show as `Attached` and can already receive SMS. 
-. Update GPRS location - the SIM card has also succesfully registered for data sessions with a different network element. 
+. Update GPRS location - the SIM card has successfully registered for data sessions with a different network element. 
 . Create PDP context - the device has started a data transfer. The device will show `Online` as long is there is no delete PDP context event. 
 . Delete PDP context - the device has ended a data transfer. The event details will also show the data transmitted and the device status will be set to `Offline` 
 
