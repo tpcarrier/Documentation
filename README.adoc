@@ -517,9 +517,10 @@ link:https://www.emnify.com/lte-m-coverage[LTE-M network coverage] list
 
 === IoT SIM
 
-IoT SIMs are more durable than regular SIM cards and come in different form factors and quality grades. EMnify has also a software application directly on the SIM so different operator profiles can be used based on the location of the device - so EMnify can provide more networks than traditional operators. 
+EMnify IoT SIMs are more durable than regular SIM cards and come in different <<Form Factors, form factors>> and <<Quality Grades, quality grades>>. For testing the platform services quickly without any SIM hardware - EMnify offers an <<eSIM>> which can be downloaded directly onto a supported smartphone. 
+EMnify has also a <<Multi-IMSI Application, multi-IMSI software application>> directly on the SIM so different operator profiles can be used based on the location of the device. Using this technology EMnify can provide a superset of roaming networks from traditional operators. 
 
-==== Form factors 
+==== Form Factors 
 
 The traditional, plugable SIM card comes in 4 different form factors:
 * 1FF (approximaltely size of a creditcard - only used in first GSM phone) - 85 x 54 x 0,76mm 
@@ -572,16 +573,33 @@ The eSIM can be used to test and verify all EMnify functionalities including:
 * Cloud Connect and Datastreamer integration
 * Zapier- No-Code Integrations
 
-==== Multi IMSI
+==== Multi-IMSI Application
 
+EMnify IoT SIM cards are equipped with a multi-IMSI applet that contains EMnify’s own and partner operator profiles. The different operator profiles are identified by the utilized <<IMSI>>. Each IMSI / partner operator has usually more than one network accessible per country. 
 
+The SIM applet utilizes a preferred IMSI list per country. When a device moves to a different country which has a different preferred IMSI configured, because it for example gives access to more networks then the applet dynamically overwrites the previously active IMSI with the preferred IMSI for this country. Likewise, when an operator’s service experiences outage, the SIM can automatically fall back to a fallback IMSI to ensure connection remains uninterrupted. 
 
+The selection of the IMSI partner that is used for the countries is based on mutliple factors. The preferred IMSI selected based on: 
 
-=== Global IoT Network Fabric
+* allowance for permanent roaming in the country
+* the most network partners in the country
+* the best availability of radio access types (e.g. LTE) or availability of features (PSM/eDRX)
+
+The Multi-IMSI applet is transparent for the device and has no impact on the device operation. In order to analyze which IMSI is currently in use, you can either check in the EMnify portal -> Connected devices -> Details or also query via directly on the device with the AT-command `AT+CIMI?`. 
+
+=== Global IoT Network and Platform 
+
+Even when IoT devices are often only deployed at one location and not moving - for a vendor selling into multiple countries it is important to have a global connectivity solution, so that there is not a need to have multiple different SIM cards in stock or have multiple contracts and tariffs. For mobile use cases there is no other alternative than using a international SIM card.
+
+Therefore, for deploying IoT solutions globally it is important to <<RAN Aggregation,aggregate multiple operators>> in the same tariff and IoT SIM. Another aspect is that the platform and data routing is setup to support a global deployment, while adhering to local data privacy regulations. EMnify's global platform is therefore using a <<Distributed Data Transport,distributed data plane>> and link:https://portal.unifiedpatents.com/patents/patent/WO-2021069322-A1[patented mechanism] called <<Regional Breakout, regional breakout>> to address these needs. 
 
 ==== RAN Aggregation
 
+
+
 ==== Distributed Data Transport
+
+
 
 ===== Regional Breakout
 
@@ -832,6 +850,8 @@ EMnify has announced its first 5G roaming agreements in August 2020 and since th
 == Services
 
 === SIM Life Cycle Management
+
+
 
 === Endpoint Management & Policies
 
