@@ -518,7 +518,7 @@ link:https://www.emnify.com/lte-m-coverage[LTE-M network coverage] list
 === IoT SIM
 
 EMnify IoT SIMs are more durable than regular SIM cards and come in different <<Form Factors, form factors>> and <<Quality Grades, quality grades>>. For testing the platform services quickly without any SIM hardware - EMnify offers an <<eSIM>> which can be downloaded directly onto a supported smartphone. 
-EMnify has also a <<Multi-IMSI Application, multi-IMSI software application>> directly on the SIM so different operator profiles can be used based on the location of the device. Using this technology EMnify can provide a superset of roaming networks from traditional operators. 
+EMnify also has a <<Multi-IMSI Application, multi-IMSI software application>> directly on the SIM so different operator profiles can be used based on the location of the device. Using this technology EMnify can provide a superset of roaming networks from traditional operators. 
 
 ==== Form Factors 
 
