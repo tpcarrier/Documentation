@@ -585,7 +585,7 @@ The selection of the IMSI partner that is used for the countries is based on mut
 * the most network partners in the country
 * the best availability of radio access types (e.g. LTE) or availability of features (PSM/eDRX)
 
-The Multi-IMSI applet is transparent for the device and has no impact on the device operation. In order to analyze which IMSI is currently in use, you can either check in the EMnify portal -> Connected devices -> Details or also query via directly on the device with the AT-command `AT+CIMI?`. 
+The Multi-IMSI applet is transparent for the device and has no impact on the device operation. In order to analyze which IMSI is currently in use, you can either check in the EMnify portal -> Connected devices -> Details or also query the device directly using the AT-command `AT+CIMI?`. 
 
 === Global IoT Network and Platform 
 
