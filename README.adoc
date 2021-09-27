@@ -523,7 +523,7 @@ EMnify also has a <<Multi-IMSI Application, multi-IMSI software application>> di
 ==== Form Factors 
 
 The traditional, plugable SIM card comes in 4 different form factors:
-* 1FF (approximaltely size of a creditcard - only used in first GSM phone) - 85 x 54 x 0,76mm 
+* 1FF (approximately the size of a credit card - only used in first GSM phones) - 85 x 54 x 0,76mm 
 * 2FF (mini SIM) - 25 x 15 x 0,76mm
 * 3FF (Micro SIM) - 15 x 12 x 0,76 mm
 * 4FF (Nano SIM) - 12,3 x 8,8 x 0,67 mm
