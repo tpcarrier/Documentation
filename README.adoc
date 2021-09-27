@@ -857,7 +857,19 @@ EMnify has announced its first 5G roaming agreements in August 2020 and since th
 === Endpoint Management & Policies
 
 === Regional Breakout
+Traditional connectivity providers normally have a centrally located network core which increases network latency. 
 
+Let's take an example of a network provider which has its network core in Ireland. And the application as well as the device that is using the nework data is in USA. This data travels from the device in USA, to the network core in Ireland and then back to the application server in USA. This geographical distance between the application server and the core network will increase the network latency. However if the network core were to be in the USA, the network latency will be lesser.
+
+.Network Latency due to centrally located core network
+image:central_core_nw.jpeg[Network Latency due to centrally located core network, 700, 300] 
+
+EMnify's Regional Breakout is a solution for this network latency. 
+Because of EMnify's globally distributed cloud architecture, you can route endpoint traffic- either dynamically depending on the device’s location or through pre-defined system configuration. 
+Choosing "Regional Breakout” in your Device Service Policy will let the system dynamically choose the breakout region, based on the visited network’s location.
+
+.Reduction in Network Latency due to EMnify Regional Breakout regions
+image:Regional_Breakout_1.jpeg[Reduction in Network Latency due to EMnify Regional Breakout regions, 700, 300] 
 // Location based services
 
 === Multi Cloud Data Streamer
@@ -882,7 +894,8 @@ To use the OpenVPN service the IoT device does not need any OpenVPN software or 
 
 You can connect from any machine using a OpenVPN client to the OpenVPN service on the EMnify communication platform. The machine can then use the private static IP address of the device to communicate with it remotely. 
 
-image:OpenVPN.png[].OpenVPN System Overview
+.OpenVPN System Overview
+image:OpenVPN.png[OpenVPN System Overview] 
 
 At the same time the IoT device can send data through the private tunnel to the IP address of the remote machine.  
 
