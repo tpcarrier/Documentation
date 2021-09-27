@@ -577,7 +577,7 @@ The eSIM can be used to test and verify all EMnify functionalities including:
 
 EMnify IoT SIM cards are equipped with a multi-IMSI applet that contains EMnify’s own and partner operator profiles. The different operator profiles are identified by the utilized <<IMSI>>. Each IMSI / partner operator usually has more than one network accessible per country. 
 
-The SIM applet utilizes a preferred IMSI list per country. When a device moves to a different country which has a different preferred IMSI configured, because it for example gives access to more networks then the applet dynamically overwrites the previously active IMSI with the preferred IMSI for this country. Likewise, when an operator’s service experiences outage, the SIM can automatically fall back to a fallback IMSI to ensure connection remains uninterrupted. 
+The SIM applet utilizes a preferred IMSI list per country. When a device moves to a different country which has a different preferred IMSI configured (for e.g. because it gives access to more networks), then the applet dynamically overwrites the previously active IMSI with the preferred IMSI for this country. Likewise, when an operator’s service experiences outage, the SIM can automatically fall back to a fallback IMSI to ensure connection remains uninterrupted. 
 
 The selection of the IMSI partner that is used for the countries is based on mutliple factors. The preferred IMSI selected based on: 
 
