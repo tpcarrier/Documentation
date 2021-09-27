@@ -591,7 +591,7 @@ The Multi-IMSI applet is transparent for the device and has no impact on the dev
 
 Even when IoT devices are more often only deployed at a single location and are not moving, for a vendor selling to multiple countries it is important to have a global connectivity solution, so that there is no need to have different SIM cards in stock or have multiple contracts and tariffs. For mobile use cases there is no other alternative than using an international SIM card.
 
-Therefore, for deploying IoT solutions globally it is important to <<Mobile Network Aggregation,aggregate multiple operators>> in the same tariff with one IoT SIM. Another aspect is that the platform and data routing is setup to support a global deployment, while adhering to local data privacy regulations. EMnify's global platform is therefore using a <<Distributed Data Transport,distributed data plane>> and link:https://portal.unifiedpatents.com/patents/patent/WO-2021069322-A1[patented mechanism] called <<Regional Breakout, regional breakout>> to address these needs. 
+Therefore, for deploying IoT solutions globally it is important to <<Mobile Network Aggregation,aggregate multiple operators>> in the same tariff with one IoT SIM. Another aspect is that the platform and data routing is setup to support a global deployment, while adhering to local data privacy regulations. EMnify's global platform therefore uses a <<Distributed Data Transport,distributed data plane>> and link:https://portal.unifiedpatents.com/patents/patent/WO-2021069322-A1[patented mechanism] called <<Regional Breakout, regional breakout>> to address these needs. 
 
 ==== Mobile Network Aggregation
 
