@@ -595,7 +595,7 @@ Therefore, for deploying IoT solutions globally it is important to <<Mobile Netw
 
 ==== Mobile Network Aggregation
 
-Any mobile operator has a footprint of roaming networks in foreign countries. In case any of their subscribers travel this ensures that they can be reached.  
+Any mobile operator has a footprint of roaming networks in foreign countries. In case any of their subscribers travel, this ensures that they can be reached.  
 
 
 ==== Distributed Data Transport
