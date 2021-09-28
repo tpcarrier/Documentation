@@ -8,7 +8,7 @@ EMnify is a IoT communications platform that enables you to connect your IoT sol
 
 - IoT SIM
 
-Using a single SIM, you can have multiple IMSIs, switch between multiple carriers and ensure uninterrupted connectivity. You can learn more about IMSI in <<Service Stack Overview>> section
+Using a single SIM, you can have multiple IMSIs, switch between multiple carriers and ensure uninterrupted connectivity. You can learn more about IMSI in <<Service Stack Overview, Service Stack Overview>> section
 
 - Highly available platform
 
@@ -16,7 +16,7 @@ Being able to connect to multiple operators over multiple partners increases con
 
 - Cloud Integration
 
-Given the cloud-native nature of our platform, you can easily integrate your cloud as well as on-premise IoT solutions. We allow you to connect through standard cloud services to establish a <<Cloud Connect, secure private network>> with your devices, get operational connectivity metadata delivered to your favorite << Multi Cloud Data Streamer, streaming analytics service>> or use your <<No-Code Workflow, low-code environment>>  to automate your device logistics and operation processes.
+Given the cloud-native nature of our platform, you can easily integrate your cloud as well as on-premise IoT solutions. We allow you to connect through standard cloud services to establish a <<Cloud Connect, secure private network>> with your devices, get operational connectivity metadata delivered to your favorite <<Multi Cloud Data Streamer, streaming analytics service>> or use your <<No-Code Workflow, low-code environment>> to automate your device logistics and operation processes.
 
 - EMnify API
 
@@ -139,7 +139,7 @@ For managing roaming Quectel also introduced the AT+QCFG command. The suggested 
 `AT+QCFG="roamservice",2,1`
 
 NOTE: Check your Quectel module AT command guide for more information.
-Further you can also read about AT commands in our <<AT command guide>>. 
+// Further you can also read about AT commands in our <<AT command guide>>. 
 
 ===== u-Blox cellular IoT modules
 
@@ -750,11 +750,10 @@ The Power Save mode has these characteristics
 * after the device wakes up it stays in idle mode for a configurable time (timer T3324) to listen for downlink messages (e.g. firmware updates)
 * the actual time the device is then in Power Save Mode is T3412 extended - T3324
 
-image:PSM.png[#PSM_Image].PSM and the 3412 and T3324 timers
+.PSM and the 3412 and T3324 timers
+image:PSM.png[#PSM_Image]
 
 NOTE: some modules (e.g. u-blox SARA-R4/SARA-N4) do not go into sleep mode when having a SIM enabled PIN. On EMnify SIMs the PIN is disabled. 
-
-
 
 [#PSM_ROAMING]
 Be aware that not all Nb-IoT and LTE-M networks have implemented PSM - and even when PSM is available with the local operator this does not mean that a roaming SIM can use it. This makes it very difficult for devices that are moving - in case they use PSM, and the new network does not support PSM - or only other timer configurations. We therefore regularly test the link:https://www.emnify.com/lte-m-coverage?hsLang=en[availability of PSM in our EMnify LTE-M roaming footprint.]
@@ -787,9 +786,10 @@ extended Discontinuous Reception (eDRX)
 * <<eDRX_AT_COMMANDS,AT Command examples for eDRX settings>>
 
 [#eDRX_WHAT]
-Whereas PSM is focused on uplink centric use cases, eDRX tries to reduce the power consumption for IoT Use cases that get downlink information. Regular smartphones are not continously listening on the radio for an incoming message but only every 1.28s or 2.56s which is called DRX (discontinous Reception). eDRX allows configuration of custom intervals of up to 40-175mins - depending on which configuration the visited network allows. 
+Whereas PSM is focused on uplink centric use cases, eDRX tries to reduce the power consumption for IoT Use cases that get downlink information. Regular smartphones are not continously listening on the radio for an incoming message but only every 1.28s or 2.56s which is called DRX (discontinous Reception). eDRX allows configuration of custom intervals of up to 40-175mins - depending on which configuration the visited network allows.
 
-image:eDRX.png[id=PSM].PSM and the 3412 and T3324 timers
+.PSM and the 3412 and T3324 timers
+image:eDRX.png[id=PSM]
 
 [#eDRX_ROAMING]
 As with PSM - not all NB-IoT and LTE-M networks support eDRX or the same timer configuration - and even if they do this does not guarantee that a roaming SIM card can utilize eDRX. We therefore also test and link:https://www.emnify.com/lte-m-coverage?hsLang=en[publish the eDRX availability on our LTE-M roaming footprint, window=read-later].  
@@ -862,14 +862,14 @@ Traditional connectivity providers normally have a centrally located network cor
 Let's take an example of a network provider which has its network core in Ireland. And the application as well as the device that is using the nework data is in USA. This data travels from the device in USA, to the network core in Ireland and then back to the application server in USA. This geographical distance between the application server and the core network will increase the network latency. However if the network core were to be in the USA, the network latency will be lesser.
 
 .Network Latency due to centrally located core network
-image:central_core_nw.jpeg[Network Latency due to centrally located core network, 700, 300] 
+image:traditional_operators.png[Network Latency due to centrally located core network, 700, 300] 
 
 EMnify's Regional Breakout is a solution for this network latency. 
 Because of EMnify's globally distributed cloud architecture, you can route endpoint traffic- either dynamically depending on the device’s location or through pre-defined system configuration. 
 Choosing "Regional Breakout” in your Device Service Policy will let the system dynamically choose the breakout region, based on the visited network’s location.
 
 .Reduction in Network Latency due to EMnify Regional Breakout regions
-image:Regional_Breakout_1.jpeg[Reduction in Network Latency due to EMnify Regional Breakout regions, 700, 300] 
+image:regional_breakout.png[Reduction in Network Latency due to EMnify Regional Breakout regions, 700, 300] 
 // Location based services
 
 === Multi Cloud Data Streamer
@@ -880,7 +880,13 @@ image:Regional_Breakout_1.jpeg[Reduction in Network Latency due to EMnify Region
 
 === Cloud Connect
 
+With the EMnify Cloud Connect you can communicate with your <<vpc,Virtual Private Cloud>> through a secure private network. By eliminating the use of public IP addresses, Cloud Connect helps you better protect your application infrastructure against attacks like <<ddos,DDoS>> while giving you the possibility to remotely access the devices.
+
 ==== Transit Gateway
+
+The EMnify platform is deployed on AWS. This allows you to create a fast and secure direct peering data path to your VPC / EC2 instances via the AWS Transit Gateway (TGW). 
+
+AWS Tansit Gateway is an AWS managed service which acts as a network transit hub that you can use to connect your VPC to your EMnify SIM cards. 
 
 ==== IPSec
 
@@ -916,6 +922,25 @@ For detailed instructions please refer to our knowledge base articles
 
 
 === Security
+
+Security is a topic often considered in hindsight while developing an IoT solution, when it should be the first thing that is considered.
+
+Hackers use various attack vectors to access your IoT devices or applications. IoT devices can act as an abundundant computating resource for hackers due to their limited security policies. Moreover given the globally distributed nature of the devices, smaller footprints and lack of resources, it can get difficult to individually secure these devices.  
+
+.Why does IoT require SASE ?
+image:security_threats.png[IoT security threats]
+
+Secure Access Service Edge (<<sase,SASE>>) introduces a new architecture where networking and security functions are bundled in a cloud-delivered service. You can apply the same security standards across all your devices independent of the location. Moreover you can integrare security features in your solutions right from the beginning.
+
+Some of the features in a <<sase,SASE>> for IoT architecture are as follows:
+
+* Dynamic Data Routing with Software-Defined Wide Area Network (SD-WAN)
+* Firewall as a Service (FaaS) 
+* Cloud Access Security Broker (CASB)
+* DNS Security
+* Threat Detection
+
+In the following sections we will discuss some of the security features offered by EMnify. 
 
 ==== DNS
 
@@ -1025,6 +1050,8 @@ Utilizing a private DNS server which is not reachable via a public IP, requires 
 [[data-tx]]Data TX :: Data received by the device
 
 [[data-usage]]Data Usage (volume) :: The data that has been used by an endpoint
+
+[[ddos]]DDoS :: Distributed Denial of Service attack - an attack where the attacker sends multiple requests to a web resource with the aim of exceeding the website's capacity to handle multiple requests and prevent the website from functioning correctly.
 
 [[dns]]DNS Domain Name System ::  A hierarchical decentralized naming system for computers, services, or any resource connected to the Internet or a private network
 
@@ -1141,6 +1168,7 @@ Utilizing a private DNS server which is not reachable via a public IP, requires 
 [[routing]]Routing :: The process of selecting a path for a network
 
 // S
+[[sase]]SASE Secure Access Service Edge :: SASE is a term coined by Gartner which combines Software Defined Networking (<<sdn,SDN>>) and Security as serves it as cloud-based Security-as-a-Service
 
 [[sdn]]SDN Software–Defined Networking :: An approach that allows network administrators to programmatically initialize, control, change, and manage network behavior dynamically via open interfaces
 
@@ -1198,8 +1226,10 @@ Utilizing a private DNS server which is not reachable via a public IP, requires 
 [[ussd-gateway]]USSD gateway :: The collection of hardware and software required to interconnect two or more disparate networks, including performing protocol conversion
 
 // V
+[[vpc]]VPC :: Virtual Private Cloud - 
+A secure private cloud hosted within a public cloud where you can host websites, store data, run application etc. 
 
-[[vpn]]VPN ::  virtual private network
+[[vpn]]VPN ::  Virtual Private Network
 // W
 // X
 // Y
